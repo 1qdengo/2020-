@@ -1,0 +1,161 @@
+<!-- html5문서입니다 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- 한글 코드를 정확하게 표현하기 위한 메타 정보 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 모바일에서 원본 비율로 볼 수 있도록 설정 -->
+    <style>
+        /* 선택자 {
+            속성:속성값; 속성:속성값;
+        } */
+        * {
+            margin: 0px;
+        }
+        label {
+            display: none;
+        }
+        input {
+            display: none;
+        }
+        header {
+            background-color: gray;
+            height: 80px;
+        }
+        nav {
+            padding-top: 10px;
+            /* 네비게이션을 위에서부터 적당한 여백을 줘서 배치 */
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            float: left;    
+            /* 왼쪽 정렬 */
+            /* border: 1px solid black; */
+            margin:10px;
+            padding: 10px;
+            color: snow;
+            font-size:16px;
+            /* 메뉴 디자인 */
+        }
+        div {
+            background-color: rgb(209, 204, 204);
+          
+        }
+        section {
+            padding: 20px;
+            line-height: 30px;
+        }
+        a {
+            color:black;
+            text-decoration-line: none;
+        }
+        footer {
+            background-color: gray;
+            height: 120px;
+            color: snow;
+            text-align: center;
+            padding-top: 60px;
+        }
+        img
+        {
+            margin:5px;
+        }
+    </style>
+    <style>
+        /* 반응형 웹을 위한 스타일 시트 */
+        /* 스마트폰 해상도 */
+        @media screen and (max-width: 767px){
+            div {
+                background-color: palegoldenrod;
+            }
+            /* 메인 메뉴 감추기 */
+            ul {
+                display: none;
+            }
+            /* 체크 박스를 클릭했을 때 보일 디자인 */
+            label {
+                display: block;
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                color:snow;
+             }
+            
+            #toggle:checked + ul {
+                display: block; width:85%;
+            }
+            ul li {
+                width:100%;
+                text-align: center;
+                background-color: darkgray;
+                margin:0px;
+                padding:0px;
+                border-top: 1px solid darkgray;
+            }
+        }
+        /* 태블릿 pc 해상도 */
+        @media screen and (min-width: 767px) and (max-width: 959px){
+            div {
+                background-color: papayawhip;
+            }
+        }
+        /* pc 해상도 */
+        @media screen and (min-width: 960px){
+            
+        }
+    </style>
+    <title>html5 두번째 시간입니다</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <label for="toggle" onclick>menu</label>
+            <input type="checkbox" id="toggle">
+            <ul>
+                <!-- 토글메뉴 추가 -->
+                <!-- 원페이지, 책갈피 기능으로 원하는 위치에 링크 걸기 -->
+                <a href="#section_profile"><li>Profile</li></a>
+                <a href="#section_skills"><li>skills</li></a>
+                <a href="#section_gallery"><li>Gallery</li></a>
+                <a href="#section_links"><li>Links</li></a>
+                <li>Board</li>
+            </ul>
+        </nav>        
+    </header>
+    <div>
+        <section id="section_profile">
+            <h1>Profile</h1><br>
+                포항고등학교 졸업<br>
+                영진전문대 컴퓨터정보계열 재학
+        </section>
+        <section id="section_skills">
+            <h1>Skills</h1><br>
+            HTML5, CSS3, JavaScript<br>
+            Java
+        </section>
+        <section id="section_gallery">
+            <h1>Gallery</h1><br>
+            <img src="tour.jpg" width="300px" height="300px">
+            <!-- &nbsp; -->
+            <img src="tour2.jpg" width="300px" height="300px">
+            <img src="tour3.jpg" width="300px" height="300px">
+        </section>
+        <section id="section_links">
+            <h1>Links</h1><br>
+            W3schools.com => <a href=" https://www.w3schools.com/" target="_blank">https://www.w3schools.com/</a><br>
+            gettyimagebank => <a href="https://www.gettyimagesbank.com/" target="_blank">https://www.gettyimagesbank.com/</a><br>
+            Freegine => <a href="https://www.freegine.com" target="_blank">https://www.freegine.com</a><br>
+            GNU Board(Free Board) => <A href="https://sir.kr/" target="_blank">https://sir.kr/</A><Br>
+            Dothome(Web hosting) => <a href="https://www.dothome.co.kr/" target="_blank">https://www.dothome.co.kr/</a><br>
+            Gabia(Domain) => <a href="https://www.gabia.com" target="_blank">https://www.gabia.com/</a><br>
+            Wix => <a href="https://ko.wix.com/" target="_blank">https://ko.wix.com/</a><br>
+        </section>
+    </div>
+    <footer>
+        copylight 2020 by gyeongdeuk kim
+    </footer>
+</body>
+</html>
